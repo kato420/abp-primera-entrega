@@ -9,6 +9,7 @@
 - Huaman Yay, Alexis
 - Oceda Chavez, Elizabeth Emperatriz
 - Vásquez Bustamante, María Fernanda
-
 ---
+📄 [Ver PDF del informe](./main.pdf)
+
 🚀 ¡Gracias por visitar!
