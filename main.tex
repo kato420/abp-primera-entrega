@@ -6,10 +6,19 @@
 \usepackage{geometry}
 \geometry{margin=2.5cm}
 \usepackage{titlesec}
+\usepackage{xurl}
 \usepackage{float}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=black}
+\usepackage{url}        % <- Opcional pero útil para enlaces
+\usepackage{hyperref}   % <- AQUÍ VA
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  breaklinks=true
+}
+
+
 
 \pagestyle{fancy}
 \fancyhf{}
