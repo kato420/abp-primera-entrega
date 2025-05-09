@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+
+\begin{document}
+
+% Portada sin numeración
+\pagenumbering{gobble}
+\input{portada.tex}
+
+% Índice con numeración normal desde 1
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{indice.tex}
+
+% Contenido del documento
+\input{introduccion.tex}
+\input{objetivos.tex}
+\input{justificacion.tex}
+\input{marco_teorico.tex}
+\input{formulacion_problema.tex}
+\input{referencias.tex}
+
+\end{document}

@@ -1,0 +1,34 @@
+\section{Formulaci\'on del problema}
+\label{sec:formulacion_problema}
+
+En este proyecto, se estudiar\'a un convertidor boost, que es un tipo de convertidor DC-DC utilizado en cargadores de bater\'ias para veh\'iculos el\'ectricos. En este an\'alisis, se modelar\'an las p\'erdidas por conducci\'on de los componentes clave como la bobina ($L$), condensador ($C$), diodo directo ($D$) y mosfet activado ($Q$), adem\'as de incluir un modelo de la bater\'ia compuesto por una resistencia $R_{bat}$ en serie con una fuente de voltaje $V_{bat}$. El modelo presentado a continuaci\'on considera supuestos como la linealidad del sistema, y las limitaciones incluyen la no consideraci\'on de efectos no lineales complejos que podr\'ian ocurrir en condiciones extremas.
+
+El modelo est\'a representado por las siguientes ecuaciones de peque\~na se\~nal:
+
+\[
+V_L(s) = V_G(s) - L_L(s) \cdot R_{eq} - V_D \cdot D' - V_0 \cdot D'
+\]
+
+\[
+I_C(s) = \frac{V_0(s) - V_{bat}}{R_0} + I_L(s) \cdot D'
+\]
+
+Donde:
+
+\begin{itemize}
+  \item $V_L(s)$ \quad \textendash\quad Es la tensi\'on en la bobina.
+  \item $V_G(s)$ \quad \textendash\quad Es la fuente de entrada.
+  \item $I_L(s)$ \quad \textendash\quad Es la corriente de la bobina.
+  \item $V_D$ \quad \textendash\quad Es el voltaje del diodo.
+  \item $D'$ \quad \textendash\quad Es el ciclo de trabajo complementario del PWM.
+  \item $V_0(s)$ \quad \textendash\quad Es la tensi\'on de salida.
+  \item $R_{eq}$ \quad \textendash\quad Es la resistencia equivalente del circuito.
+  \item $R_0$ \quad \textendash\quad Es la resistencia de carga.
+  \item $I_L(s)$ \quad \textendash\quad Es la corriente de la bobina.
+\end{itemize}
+
+Este conjunto de ecuaciones describe el comportamiento del convertidor en condiciones de peque\~na se\~nal, permitiendo analizar la respuesta del sistema ante las fluctuaciones. El modelo de peque\~na se\~nal se utiliza para identificar los efectos de las p\'erdidas por conducci\'on en el circuito de carga y su influencia sobre la eficiencia del sistema de carga de bater\'ias.
+
+El an\'alisis de los arm\'onicos y su filtrado en este sistema es fundamental para mejorar la eficiencia del cargador. Los arm\'onicos generados en el sistema pueden alterar la calidad de la energ\'ia suministrada a la bater\'ia y, por lo tanto, influir en su vida \'{u}til y rendimiento.
+
+Un par\'ametro clave en este modelo es la resistencia de carga $R_0$ y la resistencia interna de la bater\'ia $R_{bat}$. Estos par\'ametros se estudiar\'an con mayor profundidad m\'as adelante, ya que son cruciales para entender c\'omo las p\'erdidas de energ\'ia afectan la eficiencia global del convertidor y el tiempo de vida \'{u}til de la bater\'ia. Tambi\'en se investigar\'a el efecto del ciclo de trabajo del PWM en la respuesta del sistema.
